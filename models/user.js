@@ -27,6 +27,14 @@ const userSchema = new Schema(
 			delete ret.password;
 			return ret;
 		},
+		
+		avatar: {
+			type: String
+		  },
+		  date: {
+			type: Date,
+			default: Date.now
+		  }
 	}
 );
 
