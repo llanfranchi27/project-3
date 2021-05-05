@@ -1,9 +1,12 @@
+const { deleteOne } = require('../../models/post');
 const posts = require ('../../models/post');
 
 module.exports = {
     index,
     create,
     show,
+    update,
+    delete: deleteOne,
 };
 
 async function index(req, res) {
@@ -21,3 +24,15 @@ async function show(req,res) {
     const post= await Post.findById(req.params.id);
     res.status(200).json(puppy);
 }
+
+async function update(req, res) {
+    const updatedPost = await Post.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+    });
+    res.status(200).json(updatedPost);
+}
+
+async function deleteOne(req, res) {
+    const deletedPost = await Post.findByIdAndRemove(req.params.id);
+    res.status(200).json(deletedPost);
+  }

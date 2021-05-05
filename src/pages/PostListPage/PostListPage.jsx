@@ -11,7 +11,7 @@ export default function PostListPage(props) {
 
 	return (
 		<>
-		  <h1>Puppy List</h1>
+		  <h1>Post List</h1>
 		  <div className="PostListPage-grid">
 			{props.posts.map((post) => (
 			  <PostListItem
