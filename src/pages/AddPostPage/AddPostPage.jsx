@@ -35,7 +35,7 @@ export default function AddPostPage(props){
 
   return (
     <>
-      <h1>Add Puppy</h1>
+      <h1>Add a Post</h1>
       <form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Pup's Name (required)</label>

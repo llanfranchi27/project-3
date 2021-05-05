@@ -44,43 +44,68 @@ useEffect(() => {
 		await postsApi.deleteOne(id);
 		setPosts(posts.filter(p => p._id !== id))
 	  }
-
-	return (
-		<main className='App'>
-			{user ? (
-				<>
-					<NavBar user={user} setUser={setUser}  />
-					<Switch>
-						<Route path='/posts/new'>
-							<PostsPage />
-						</Route>
-						<Route path='/dashboard'>
-							<AddPostPage />
-						</Route>
-						<Route exact path='/add'>
-							<AddPostPage
-							handleAddPost={handleAddPost}
-							/>
-						</Route>
-						<Route exact path='/'>
-							<PostListPage
-							posts={posts}
-							/>
-						</Route>
-						<Route exact path='/details'>
-							<PostDetailPage />
-						</Route>
-						<Route exact path='/edit'>
-							<EditPostPage
-							handleUpdatePost={handleUpdatePost}
-							/>
-						</Route>
-						<Redirect to='/dashboard' />
-					</Switch>
-				</>
-			) : (
-				<AuthPage setUser={setUser} />
-			)}
-		</main>
-	);
+	  return (
+		<div className="App">
+		  {user ? 
+			<>
+			  <NavBar user={user} setUser={setUser} />
+				<Switch>
+				  <Route path="/posts/list">
+					<PostListPage posts={posts} handleDeletePost={handleDeletePost}/>
+				  </Route>
+				  <Route path="/posts/add">
+					<AddPostPage handleAddPost={handleAddPost} />
+				  </Route>
+				  <Route exact path="/posts/details">
+					<PostDetailPage />
+				  </Route>
+				  <Route exact path="/posts/edit">
+					<EditPostPage handleUpdatePost={handleUpdatePost}/>
+				  </Route>
+				  <Redirect to="/posts" />
+				</Switch>
+			  </>
+			  :
+			<AuthPage setUser={setUser} />
+		  }
+		</div>
+	  );
+	// return (
+	// 	<main className='App'>
+	// 		{user ? (
+	// 			<>
+	// 				<NavBar user={user} setUser={setUser}  />
+	// 				<Switch>
+	// 					<Route path='/posts/new'>
+	// 						<PostsPage />
+	// 					</Route>
+	// 					<Route path='/dashboard'>
+	// 						<AddPostPage />
+	// 					</Route>
+	// 					<Route exact path='/add'>
+	// 						<AddPostPage
+	// 						handleAddPost={handleAddPost}
+	// 						/>
+	// 					</Route>
+	// 					<Route exact path='/'>
+	// 						<PostListPage
+	// 						posts={posts}
+	// 						/>
+	// 					</Route>
+	// 					<Route exact path='/details'>
+	// 						<PostDetailPage />
+	// 					</Route>
+	// 					<Route exact path='/edit'>
+	// 						<EditPostPage
+	// 						handleUpdatePost={handleUpdatePost}
+	// 						/>
+	// 					</Route>
+	// 					<Redirect to='/dashboard' />
+	// 				</Switch>
+	// 			</>
+	// 		) : (
+	// 			<AuthPage setUser={setUser} />
+	// 		)}
+	// 	</main>
+	// );
 }
