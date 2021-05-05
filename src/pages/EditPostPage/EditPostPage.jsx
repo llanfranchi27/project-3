@@ -31,7 +31,7 @@ export default function EditPostPage(props){
       <h1>Edit Post</h1>
       <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Pup's Name (required)</label>
+          <label>Type your name (required)</label>
           <input
             className="form-control"
             name="name"
@@ -41,7 +41,7 @@ export default function EditPostPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Pup's Breed (required)</label>
+          <label>Type content for your blog (required)</label>
           <input
             className="form-control"
             name="breed"
@@ -51,7 +51,7 @@ export default function EditPostPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Pup's Age</label>
+          <label>Type </label>
           <input
             className="form-control"
             name="age"
@@ -64,7 +64,7 @@ export default function EditPostPage(props){
           className="btn btn-xs"
           disabled={invalidForm}
         >
-          SAVE PUPPY
+          SAVE BlOG
         </button>&nbsp;&nbsp;
         <Link to='/'>CANCEL</Link>
       </form>

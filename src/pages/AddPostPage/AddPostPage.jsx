@@ -29,10 +29,10 @@ export default function AddPostPage(props){
 
   return (
     <>
-      <h1>Add Puppy</h1>
+      <h1>Add Post</h1>
       <form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Pup's Name (required)</label>
+          <label>Type your name (required)</label>
           <input
             className="form-control"
             name="name"
@@ -42,7 +42,7 @@ export default function AddPostPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Pup's Breed (required)</label>
+          <label>Type something for your blog (required)</label>
           <input
             className="form-control"
             name="breed"
@@ -65,7 +65,7 @@ export default function AddPostPage(props){
           className="btn"
           disabled={invalidForm}
         >
-          ADD PUPPY
+          ADD POST
         </button>
       </form>
     </>
