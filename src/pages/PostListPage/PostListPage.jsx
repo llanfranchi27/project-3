@@ -1,13 +1,13 @@
 import React from 'react';
-import * as usersService from '../../utilities/users-service';
+// import * as usersService from '../../utilities/users-service';
 import PostListItem from '../../components/PostListItem/PostListItem'
-import { PromiseProvider } from 'mongoose';
+// import { PromiseProvider } from 'mongoose';
+import "./PostListPage.css";
 
-
-export default function PostListPage(props) {
-	async function handleCheckToken() {
-		usersService.checkToken();
-	}
+export default function PostListPage(props, handleDeletePost) {
+	// async function handleCheckToken() {
+	// 	usersService.checkToken();
+	// }
 
 	return (
 		<>
@@ -17,7 +17,7 @@ export default function PostListPage(props) {
 			  <PostListItem
 				post={post}
 				key={post._id}
-				handleDeletePuppy={props.handleDeletePuppy}
+				handleDeletePost={props.handleDeletePost}
 			  />
 			))}
 		  </div>

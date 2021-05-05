@@ -1,12 +1,4 @@
-import React, {Component, useState, useRef, useEffect } from 'react';
-
-// export default function AddPostPage(props){
-//   return(
-//     <div>
- 
-// </div>
-//   )
-// }
+import React, {useState, useRef, useEffect } from 'react';
 
 export default function AddPostPage(props){
   const [invalidForm, setInvalidForm] = useState(true);
@@ -15,7 +7,6 @@ export default function AddPostPage(props){
     breed: 'Mixed',
     age: '0'
   })
-
   const formRef = useRef();
 
   useEffect(() => {
@@ -23,7 +14,10 @@ export default function AddPostPage(props){
   }, [formData]);
 
   const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(formData);
     props.handleAddPost(formData);
+
   }
 
   const handleChange = (e) => {
@@ -35,7 +29,7 @@ export default function AddPostPage(props){
 
   return (
     <>
-      <h1>Add a Post</h1>
+      <h1>Add Puppy</h1>
       <form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Pup's Name (required)</label>
@@ -66,7 +60,7 @@ export default function AddPostPage(props){
             onChange={handleChange}
           />
         </div>
-        <button
+        <button onClick={() => console.log("The button is clicked")}
           type="submit"
           className="btn"
           disabled={invalidForm}

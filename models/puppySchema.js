@@ -1,6 +1,6 @@
 const Schema = require("mongoose").Schema;
 
-const puppySchema = new Schema(
+const postSchema = new Schema(
   {
     name: { type: String, required: true },
     age: { type: Number, required: false },
