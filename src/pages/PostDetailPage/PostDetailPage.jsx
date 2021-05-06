@@ -1,5 +1,5 @@
 import React from 'react';
-import PostCard from '../../components/PostCard/PostCard';
+import PostCard from '../../Components/PostCard/PostCard';
 import {useLocation} from 'react-router-dom';
 
 function PostDetailPage(props) {

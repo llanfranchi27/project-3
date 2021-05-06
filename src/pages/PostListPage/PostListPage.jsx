@@ -1,6 +1,6 @@
 import React from 'react';
 // import * as usersService from '../../utilities/users-service';
-import PostListItem from '../../components/PostListItem/PostListItem'
+import PostListItem from '../../Components/PostListItem/PostListItem'
 // import { PromiseProvider } from 'mongoose';
 import "./PostListPage.css";
 

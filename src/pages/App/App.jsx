@@ -6,7 +6,7 @@ import * as postsApi from "../../utilities/posts-api";
 import AddPostPage from "../AddPostPage/AddPostPage";
 import PostListPage from "../PostListPage/PostListPage";
 import PostDetailPage from "../PostDetailPage/PostDetailPage";
-import NavBar from "../../components/NavBar/NavBar";
+import NavBar from "../../Components/NavBar/NavBar";
 import EditPostPage from "../EditPostPage/EditPostPage";
 
 import "./App.css";
