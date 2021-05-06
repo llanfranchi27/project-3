@@ -9,10 +9,10 @@ export default function PostCard({ post }) {
       </div>
       <div className="panel-body">
         <dl>
-          <dt>Breed</dt>
-          <dd>{post.breed}</dd>
-          <dt>Age</dt>
-          <dd>{post.age}</dd>
+          <dt></dt>
+          <dd>{post.text}</dd>
+          {/* <dt>Age</dt>
+          <dd>{post.age}</dd> */}
         </dl>
       </div>
       <div className="panel-footer">

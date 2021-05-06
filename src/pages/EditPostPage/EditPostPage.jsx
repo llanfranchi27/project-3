@@ -45,7 +45,7 @@ export default function EditPostPage(props){
           <input
             className="form-control"
             name="breed"
-            value={ formData.breed}
+            value={ formData.text}
             onChange={ handleChange}
             required
           />
@@ -55,7 +55,7 @@ export default function EditPostPage(props){
           <input
             className="form-control"
             name="age"
-            value={ formData.age}
+            value={ formData.subject}
             onChange={ handleChange}
           />
         </div>

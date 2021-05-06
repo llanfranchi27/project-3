@@ -39,13 +39,7 @@ export default class SignUpForm extends Component {
 			// An error occurred
 			this.setState({ error: 'Sign Up Failed - Try Again' });
 		}
-		// this.setState({
-		//   name: '',
-		//   email: '',
-		//   password: '',
-		//   confirm: '',
-		//   error: '',
-		// })
+		
 	};
 
 	render() {
