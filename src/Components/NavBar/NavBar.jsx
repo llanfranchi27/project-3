@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
 
-    <div id="main-navbar">
+    <>
   <div id='header'>
     <h1>SEI BLOGS</h1>
 
@@ -24,6 +24,6 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp; <span>Welcome, {user.name} !</span>
       &nbsp; | &nbsp; <Link to='' onClick={handleLogOut}>Log Out</Link>
     </nav>
-    </div>
+</>  
   );
 }

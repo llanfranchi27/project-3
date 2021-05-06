@@ -16,16 +16,17 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    async function getPosts() {
-      const posts = await postsApi.getAll();
-      setPosts(posts);
-    }
-    getPosts();
-  }, []);
+  // useEffect(() => {
+  //   async function getPosts() {
+  //     const posts = await postsApi.getAll();
+  //     setPosts(posts);
+  //   }
+  //   getPosts();
+  // }, []);
   const history = useHistory();
+
   useEffect(() => {
-    history.push("/");
+    history.push("/list");
   }, [posts, history]);
 
   async function handleAddPost(newPostData) {
@@ -52,7 +53,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           {/* <Switch> */}
           <Route path="/list">
-            <PostListPage posts={posts} handleDeletePost={handleDeletePost} />
+            <PostListPage posts={posts} user={user} setPosts={setPosts} handleDeletePost={handleDeletePost} />
           </Route>
           <Route path="/add">
             <AddPostPage handleAddPost={handleAddPost} />
@@ -63,8 +64,6 @@ export default function App() {
           <Route exact path="/edit">
             <EditPostPage handleUpdatePost={handleUpdatePost} />
           </Route>
-          {/* <Redirect to="/posts" /> */}
-          {/* </Switch> */}
         </>
       ) : (
         <AuthPage setUser={setUser} />

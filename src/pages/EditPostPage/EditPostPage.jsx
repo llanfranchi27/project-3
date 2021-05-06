@@ -44,7 +44,7 @@ export default function EditPostPage(props){
           <label>Type content for your blog (required)</label>
           <input
             className="form-control"
-            name="breed"
+            name="text"
             value={ formData.text}
             onChange={ handleChange}
             required
@@ -54,7 +54,7 @@ export default function EditPostPage(props){
           <label>Type </label>
           <input
             className="form-control"
-            name="age"
+            name="subject"
             value={ formData.subject}
             onChange={ handleChange}
           />

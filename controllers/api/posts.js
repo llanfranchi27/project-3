@@ -15,7 +15,7 @@ async function index(req, res) {
 }
 
 async function create(req,res) {
-    const {name,breed,age } = req.body;
+    const {name,text,subject } = req.body;
     const post = await Post.create(req.body);
     res.status(201).json(post);
 }

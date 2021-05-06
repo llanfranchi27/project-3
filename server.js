@@ -26,8 +26,9 @@ app.use(require('./config/checkToken'));
 app.use('/api/users', require('./routes/api/users'));
 
 // Protect the api routes below from anonymous users
+const ensuredLoggedIn = require('./config/ensureLoggedIn');
+app.use('/api/posts', ensuredLoggedIn, require('./routes/api/posts'));
 
-app.use('/api/posts', require('./routes/api/posts'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
