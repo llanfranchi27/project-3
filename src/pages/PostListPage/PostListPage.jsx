@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import * as postsApi from '../../utilities/posts-api';
 
 import PostListItem from '../../Components/PostListItem/PostListItem'
