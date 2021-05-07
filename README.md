@@ -3,3 +3,25 @@
 [Open app in Heroku](https://sei-blog-project.herokuapp.com/)
 
 ![Sign up page](screenshots/img1.png)
+![Dashboard](screenshots/img2.png)
+
+
+### Technologies used
+* React 
+* Node JS
+* MongoDB 
+* Mongoose
+* Javascript
+* Express
+* CSS
+
+### Next features
+* Improve UI.
+* Post images in the blog.
+* Use an API.
+
+
+
+[Trello planning](https://trello.com/b/vuSQYerC/sei-blog)
+
+
