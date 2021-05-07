@@ -10,19 +10,12 @@ import NavBar from "../../Components/NavBar/NavBar";
 import EditPostPage from "../EditPostPage/EditPostPage";
 
 import "./App.css";
-// import PostsPage from '../AddPostPage/AddPostPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //   async function getPosts() {
-  //     const posts = await postsApi.getAll();
-  //     setPosts(posts);
-  //   }
-  //   getPosts();
-  // }, []);
+
   const history = useHistory();
 
   useEffect(() => {

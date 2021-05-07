@@ -3,9 +3,7 @@ import PostCard from '../../Components/PostCard/PostCard';
 import {useLocation} from 'react-router-dom';
 
 function PostDetailPage(props) {
-  // Refer to PuppyListItem to see how puppy is being passed via the <Link>
-  // using the useLocation hook from react-router dom, to grab the 
-  // state, desctructering the puppy variable attached to state
+  
   const { state: {post} } = useLocation()
 
   return (
